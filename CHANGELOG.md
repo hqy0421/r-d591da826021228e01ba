@@ -1,3 +1,17 @@
+Unreleased
+----------
+
+- Added the `dimension_backfill` materialization for local SQL models: it accepts complete attribute
+  observations keyed by business key and effective time, keeps them in a persistent observation store, and
+  rebuilds SCD2 `[valid_from, valid_to)` history from all of them, so late arriving observations split an
+  existing interval and same-start corrections replace the stored observation
+- `dimension_backfill` re-links the declared fact tables' version columns to the covering version (boundary
+  hits the new version, uncovered facts become `null`, other columns are untouched), inside the model's dbt
+  transaction, so an in-transaction hook failure leaves the previous store, history and fact mapping in place
+- Contradictory observations for the same business key and effective time in one `dimension_backfill` batch
+  raise a compilation error instead of picking one
+- Unchanged start points keep their existing version identifiers across reruns
+
 1.11.1 (2026-10-26)
 -------------------
 

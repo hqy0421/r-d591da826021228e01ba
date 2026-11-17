@@ -1,0 +1,111 @@
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E005", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Acquiring new duckdb connection '_test'", "name": "NewConnection", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.219478Z"}}
+{"data": {"relation": {"database": "memory", "identifier": "", "schema": "test17949305980719742302_test_basic"}}, "info": {"category": "", "code": "E020", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Creating schema \"database: \"memory\"\nschema: \"test17949305980719742302_test_basic\"\n\"", "name": "SchemaCreation", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.220497Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.222629Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: \n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  ", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.223499Z"}}
+{"data": {"connection_state": "init"}, "info": {"category": "", "code": "E037", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Opening a new connection, currently in state init", "name": "NewConnectionOpening", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.224205Z"}}
+{"data": {"elapsed": 0.01304948, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "SQL status: OK in 0.013 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.237329Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.239333Z"}}
+{"data": {"conn_name": "_test", "sql": "BEGIN"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: BEGIN", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.240258Z"}}
+{"data": {"elapsed": 0.000545832, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.241701Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.242621Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n    \n        create schema if not exists \"memory\".\"test17949305980719742302_test_basic\"\n    "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: \n    \n    \n        create schema if not exists \"memory\".\"test17949305980719742302_test_basic\"\n    ", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.243484Z"}}
+{"data": {"elapsed": 0.00046302698, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.244764Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E018", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLCommit", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.246154Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.246928Z"}}
+{"data": {"conn_name": "_test", "sql": "COMMIT"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.247725Z"}}
+{"data": {"elapsed": 0.00034572004, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.248802Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E010", "extra": {}, "invocation_id": "e5c3c9a5-fb74-4e3e-a2f5-6ea1fdc8f392", "level": "debug", "msg": "On _test: Close", "name": "ConnectionClosed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:49:58.249721Z"}}
+
+
+============================== 23:49:58.257741 | 064d2884-5781-4f3d-875d-b2edc1e75dfb ==============================
+[0m23:49:58.257741 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:49:58.258677 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'log_path': '/workspace/logs/test17949305980719742302', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'invocation_command': 'dbt tests/unit tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_table_function.py tests/functional/adapter/test_simple_snapshot.py tests/functional/adapter/test_dimension_backfill.py -q', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'log_cache_events': 'False', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/profile3', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m23:49:58.259506 [debug] [MainThread]: Connection '_test' was properly closed.
+[0m23:49:58.263667 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m23:49:58.297703 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m23:49:58.300151 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:49:58.612419 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:58.617092 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:58.620948 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:58.622152 [info ] [MainThread]: Found 528 macros
+[0m23:49:58.623589 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m23:49:58.624601 [debug] [MainThread]: Command end result
+[0m23:49:58.651272 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:58.655845 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:58.660465 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:58.662408 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/run_results.json
+[0m23:49:58.663301 [info ] [MainThread]: 
+[0m23:49:58.664201 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:49:58.665074 [info ] [MainThread]: 
+[0m23:49:58.665756 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=0
+[0m23:49:58.666749 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 0.41103727, "process_in_blocks": "4040", "process_kernel_time": 1.263849, "process_mem_max_rss": "417256", "process_out_blocks": "38680", "process_user_time": 12.831079}
+[0m23:49:58.667591 [debug] [MainThread]: Command `cli seed` succeeded at 23:49:58.667498 after 0.41 seconds
+[0m23:49:58.668375 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:49:58.673992 | 8eb04472-5e5e-4914-85ee-f60d8cfdffa7 ==============================
+[0m23:49:58.673992 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:49:58.674861 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'log_path': '/workspace/logs/test17949305980719742302', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'invocation_command': 'dbt tests/unit tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_table_function.py tests/functional/adapter/test_simple_snapshot.py tests/functional/adapter/test_dimension_backfill.py -q', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'log_cache_events': 'False', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/profile3', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m23:49:58.679514 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m23:49:58.729352 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m23:49:58.924770 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:49:58.925909 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:49:58.926663 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:49:58.955555 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:58.959850 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:58.964012 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:58.965575 [info ] [MainThread]: Found 528 macros
+[0m23:49:58.966768 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m23:49:58.967751 [debug] [MainThread]: Command end result
+[0m23:49:58.990531 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:58.994608 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:58.998349 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:58.999848 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/run_results.json
+[0m23:49:59.000910 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.32858384, "process_in_blocks": "4271", "process_kernel_time": 1.292502, "process_mem_max_rss": "417256", "process_out_blocks": "41344", "process_user_time": 12.953123}
+[0m23:49:59.001721 [debug] [MainThread]: Command `cli run` succeeded at 23:49:59.001626 after 0.33 seconds
+[0m23:49:59.002358 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:49:59.008816 | 0be8190d-3c0f-4bde-bd2e-f4c80448f9e1 ==============================
+[0m23:49:59.008816 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:49:59.009658 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'log_path': '/workspace/logs/test17949305980719742302', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'invocation_command': 'dbt tests/unit tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_table_function.py tests/functional/adapter/test_simple_snapshot.py tests/functional/adapter/test_dimension_backfill.py -q', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'log_cache_events': 'False', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/profile3', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m23:49:59.013824 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m23:49:59.049136 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m23:49:59.259466 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:49:59.260507 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:49:59.261238 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:49:59.265825 [info ] [MainThread]: Found 528 macros
+[0m23:49:59.267137 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m23:49:59.268156 [debug] [MainThread]: Command end result
+[0m23:49:59.290873 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:59.294687 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:59.298664 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:59.300209 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/run_results.json
+[0m23:49:59.303097 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m23:49:59.303886 [info ] [MainThread]: Building catalog
+[0m23:49:59.305441 [debug] [MainThread]: Wrote artifact CatalogArtifact to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/catalog.json
+[0m23:49:59.327814 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/manifest.json
+[0m23:49:59.332170 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/semantic_manifest.json
+[0m23:49:59.335828 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/osi_document.json
+[0m23:49:59.336605 [info ] [MainThread]: Catalog written to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project3/target/catalog.json
+[0m23:49:59.337658 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 0.33040333, "process_in_blocks": "4502", "process_kernel_time": 1.302299, "process_mem_max_rss": "417256", "process_out_blocks": "47568", "process_user_time": 13.083287}
+[0m23:49:59.338625 [debug] [MainThread]: Command `cli docs generate` succeeded at 23:49:59.338516 after 0.33 seconds
+[0m23:49:59.339374 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m23:49:59.340062 [debug] [MainThread]: Flushing usage events
+[0m23:49:59.341644 [debug] [MainThread]: Acquiring new duckdb connection '_test'
+[0m23:49:59.342544 [debug] [MainThread]: Dropping schema "database: "memory"
+schema: "test17949305980719742302_test_basic"
+".
+[0m23:49:59.344546 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:49:59.345419 [debug] [MainThread]: On _test: BEGIN
+[0m23:49:59.346179 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:49:59.347379 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:49:59.348014 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:49:59.348697 [debug] [MainThread]: On _test: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "_test"} */
+drop schema if exists "memory"."test17949305980719742302_test_basic" cascade
+[0m23:49:59.349923 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:49:59.351044 [debug] [MainThread]: On _test: COMMIT
+[0m23:49:59.351814 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:49:59.352426 [debug] [MainThread]: On _test: COMMIT
+[0m23:49:59.353485 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:49:59.354244 [debug] [MainThread]: On _test: Close

@@ -827,6 +827,81 @@ Example table_function with 2 parameters invocation:
 select * from {{ ref("my_table_function_with_parameters") }}(1, 2)
 ```
 
+### `dimension_backfill` Materialization
+
+dbt's `snapshot` command builds SCD2 history from whatever a source table looks like *now*, which cannot
+represent an observation that arrives late: once a later version has been written, the earlier interval is
+already closed and the facts that point at it keep pointing at the old value. The `dimension_backfill`
+materialization instead treats the model's `select` as a *batch of complete attribute observations* and
+rebuilds the dimension history from all observations it has ever accepted.
+
+```sql
+{{
+    config(
+        materialized='dimension_backfill',
+        unique_key='customer_id',
+        updated_at='effective_at',
+        dimension_attributes=['name', 'segment'],
+        fact_tables=[
+            {'relation': 'sales', 'occurred_at': 'sold_at', 'version_column': 'customer_version_id'},
+        ],
+    )
+}}
+
+select customer_id, effective_at, name, segment
+from {{ ref('customer_observations') }}
+```
+
+| option | required | default | description |
+| --- | --- | --- | --- |
+| `unique_key` | yes | | Business key column(s) of the dimension; a string or a list of strings |
+| `updated_at` | yes | | Effective time column of the observations: when the attributes started to apply |
+| `dimension_attributes` | yes | | Attribute columns that make up a version; a string or a list of strings |
+| `version_column` | no | `dimension_version_id` | Column holding the version identifier in the history and (by default) in fact tables |
+| `history_start_column` | no | `valid_from` | Column holding the (inclusive) start of each version |
+| `history_end_column` | no | `valid_to` | Column holding the (exclusive) end of each version; `null` for the current one |
+| `fact_tables` | no | `[]` | Fact tables whose version column is re-linked to this dimension, see below |
+
+Each run upserts the batch into a persistent observation store, `<model>__dbt_observations`:
+
+* An observation is identified by its business key and effective time, so re-sending a corrected observation
+  for the same start point *replaces* the stored one instead of opening a second version.
+* An observation whose attributes repeat the previous observation for the same business key is stored but does
+  not open a new version.
+* Two different attribute tuples for the same (business key, effective time) in one batch contradict each
+  other and abort the run with an error; the source has to be deduplicated (or corrected) first.
+* Observations without a business key or an effective time are rejected, since they cannot be ordered.
+
+The model relation is then rebuilt as `[valid_from, valid_to)` history over the whole store: one row per change
+point, ending at the next change point, with `null` in `valid_to` for the current version. A change point that
+already existed keeps the `version_column` value it had in the previous build, so reruns only assign new
+identifiers to versions that actually start at a new time.
+
+Declaring `fact_tables` re-links each fact table's version column to the version that covers its business key and
+occurrence time. Only that column is written: a fact whose occurrence time falls exactly on a change point gets
+the *new* version (the intervals are half open), a fact that no version covers gets `null`, and every other fact
+column keeps its value. Fact entries accept:
+
+| key | required | default | description |
+| --- | --- | --- | --- |
+| `relation` | yes | | Fact table name, relative to the model: `sales`, `schema.sales` or `database.schema.sales` |
+| `occurred_at` | no | `updated_at` | Occurrence time column of the fact table |
+| `unique_key` | no | `unique_key` | Business key column(s) of the fact table, matched positionally with the dimension's |
+| `version_column` | no | `version_column` | Column holding the version identifier; added as `varchar` if it does not exist yet |
+
+Fact tables are named as strings because the config has to stay serializable, and because a fact table does not
+have to be a dbt model (it can be a seed or an externally loaded table). If it *is* built by dbt in the same run,
+make the dimension run after it with a `-- depends_on: {{ ref('sales') }}` comment at the top of the model, so
+the fact table exists and is up to date when its version column is re-linked.
+
+The observation store, the rebuilt history and the fact re-links are written in the model's transaction, so an
+in-transaction failure — including a failing `post_hook` — rolls all of them back and leaves the previous
+observation store, history and fact version columns in place.
+
+The materialization is only available for local DuckDB databases; MotherDuck connections are rejected because
+they cannot give the same transactional guarantees. `dbt snapshot` and the other materializations are unchanged.
+A `--full-refresh` drops the observation store first, so the history is rebuilt from the current batch only.
+
 ### Python Support
 
 dbt added support for [Python models in version 1.3.0](https://docs.getdbt.com/docs/build/python-models). For most data platforms,

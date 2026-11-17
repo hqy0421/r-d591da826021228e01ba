@@ -1,0 +1,545 @@
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E005", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Acquiring new duckdb connection '_test'", "name": "NewConnection", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.687230Z"}}
+{"data": {"relation": {"database": "memory", "identifier": "", "schema": "test17949306658136342532_test_dimension_backfill"}}, "info": {"category": "", "code": "E020", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Creating schema \"database: \"memory\"\nschema: \"test17949306658136342532_test_dimension_backfill\"\n\"", "name": "SchemaCreation", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.688624Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.691846Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: \n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  ", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.693057Z"}}
+{"data": {"connection_state": "init"}, "info": {"category": "", "code": "E037", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Opening a new connection, currently in state init", "name": "NewConnectionOpening", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.694176Z"}}
+{"data": {"elapsed": 0.044716723, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "SQL status: OK in 0.045 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.739011Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.746892Z"}}
+{"data": {"conn_name": "_test", "sql": "BEGIN"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: BEGIN", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.750272Z"}}
+{"data": {"elapsed": 0.002848137, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "SQL status: OK in 0.003 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.768413Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.772524Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n    \n        create schema if not exists \"memory\".\"test17949306658136342532_test_dimension_backfill\"\n    "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: \n    \n    \n        create schema if not exists \"memory\".\"test17949306658136342532_test_dimension_backfill\"\n    ", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.777432Z"}}
+{"data": {"elapsed": 0.00076496403, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.782418Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E018", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLCommit", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.787252Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.784887Z"}}
+{"data": {"conn_name": "_test", "sql": "COMMIT"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLQuery", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.786759Z"}}
+{"data": {"elapsed": 0.000631253, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.797605Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E010", "extra": {}, "invocation_id": "cd47465e-7987-4c69-b966-41b22d45c00e", "level": "debug", "msg": "On _test: Close", "name": "ConnectionClosed", "pid": 50462, "thread": "MainThread", "ts": "2026-11-17T15:51:05.802738Z"}}
+
+
+============================== 23:51:05.836982 | 733762c3-dbc7-4d3f-a42d-400e7a4a9540 ==============================
+[0m23:51:05.836982 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:51:05.845582 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'log_path': '/workspace/logs/test17949306658136342532', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'invocation_command': 'dbt tests/unit tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_table_function.py tests/functional/adapter/test_simple_snapshot.py tests/functional/adapter/test_dimension_backfill.py -q', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'log_cache_events': 'False', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/profile21', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m23:51:05.848318 [debug] [MainThread]: Connection '_test' was properly closed.
+[0m23:51:05.859819 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m23:51:05.978655 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m23:51:05.982642 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:51:06.298776 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/manifest.json
+[0m23:51:06.304157 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/semantic_manifest.json
+[0m23:51:06.308313 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/osi_document.json
+[0m23:51:06.310247 [info ] [MainThread]: Found 1 model, 2 seeds, 528 macros
+[0m23:51:06.311884 [info ] [MainThread]: 
+[0m23:51:06.312867 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m23:51:06.313709 [info ] [MainThread]: 
+[0m23:51:06.314744 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:51:06.316596 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m23:51:06.318779 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m23:51:06.320055 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m23:51:06.322201 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:06.325107 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:51:06.327169 [debug] [ThreadPool]: On list_memory: Close
+[0m23:51:06.328744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949306658136342532_test_dimension_backfill)
+[0m23:51:06.329991 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949306658136342532_test_dimension_backfill"
+"
+[0m23:51:06.332830 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.333831 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949306658136342532_test_dimension_backfill"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m23:51:06.334850 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:51:06.336902 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:51:06.339024 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.340045 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: BEGIN
+[0m23:51:06.341393 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:51:06.342203 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.343063 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949306658136342532_test_dimension_backfill"} */
+
+    
+    
+        create schema if not exists "memory"."test17949306658136342532_test_dimension_backfill"
+    
+[0m23:51:06.344386 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:51:06.345608 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: COMMIT
+[0m23:51:06.346633 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.347435 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: COMMIT
+[0m23:51:06.348496 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:51:06.349224 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: Close
+[0m23:51:06.351255 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949306658136342532_test_dimension_backfill, now list_memory_test17949306658136342532_test_dimension_backfill)
+[0m23:51:06.353124 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.354062 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: BEGIN
+[0m23:51:06.354999 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:51:06.356411 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:51:06.357240 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.358294 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949306658136342532_test_dimension_backfill"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949306658136342532_test_dimension_backfill'
+    and lower(table_catalog) = 'memory'
+  
+[0m23:51:06.363038 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:51:06.365114 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: ROLLBACK
+[0m23:51:06.366858 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: Close
+[0m23:51:06.368346 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.369199 [debug] [MainThread]: On master: BEGIN
+[0m23:51:06.370024 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:51:06.371413 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:06.372230 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.373057 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.373942 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.375153 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:51:06.376262 [debug] [MainThread]: On master: Close
+[0m23:51:06.379449 [debug] [Thread-635]: Began running node seed.test.orders
+[0m23:51:06.379987 [debug] [Thread-636]: Began running node seed.test.product_observations
+[0m23:51:06.381224 [info ] [Thread-635]: 1 of 2 START seed file test17949306658136342532_test_dimension_backfill.orders . [RUN]
+[0m23:51:06.382209 [info ] [Thread-636]: 2 of 2 START seed file test17949306658136342532_test_dimension_backfill.product_observations  [RUN]
+[0m23:51:06.383545 [debug] [Thread-635]: Re-using an available connection from the pool (formerly list_memory_test17949306658136342532_test_dimension_backfill, now seed.test.orders)
+[0m23:51:06.384670 [debug] [Thread-636]: Acquiring new duckdb connection 'seed.test.product_observations'
+[0m23:51:06.385634 [debug] [Thread-635]: Began compiling node seed.test.orders
+[0m23:51:06.386560 [debug] [Thread-636]: Began compiling node seed.test.product_observations
+[0m23:51:06.387429 [debug] [Thread-635]: Began executing node seed.test.orders
+[0m23:51:06.388241 [debug] [Thread-636]: Began executing node seed.test.product_observations
+[0m23:51:06.389758 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.392697 [debug] [Thread-635]: On seed.test.orders: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "seed.test.orders"} */
+select database_name, type from duckdb_databases()
+[0m23:51:06.393970 [debug] [Thread-635]: Opening a new connection, currently in state closed
+[0m23:51:06.395805 [debug] [Thread-635]: SQL status: OK in 0.002 seconds
+[0m23:51:06.397525 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.398599 [debug] [Thread-635]: On seed.test.orders: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "seed.test.orders"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m23:51:06.400395 [debug] [Thread-635]: SQL status: OK in 0.001 seconds
+[0m23:51:06.405216 [debug] [Thread-636]: Using duckdb connection "seed.test.product_observations"
+[0m23:51:06.406256 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.407197 [debug] [Thread-636]: On seed.test.product_observations: BEGIN
+[0m23:51:06.408356 [debug] [Thread-635]: On seed.test.orders: BEGIN
+[0m23:51:06.409196 [debug] [Thread-636]: Opening a new connection, currently in state init
+[0m23:51:06.410631 [debug] [Thread-635]: SQL status: OK in 0.001 seconds
+[0m23:51:06.411475 [debug] [Thread-636]: SQL status: OK in 0.002 seconds
+[0m23:51:06.412074 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.412844 [debug] [Thread-636]: Using duckdb connection "seed.test.product_observations"
+[0m23:51:06.413660 [debug] [Thread-635]: On seed.test.orders: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "seed.test.orders"} */
+
+    create table "memory"."test17949306658136342532_test_dimension_backfill"."orders" ("order_id" integer,"region" text,"product_code" text,"ordered_at" date,"quantity" integer)
+  
+[0m23:51:06.414419 [debug] [Thread-636]: On seed.test.product_observations: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "seed.test.product_observations"} */
+
+    create table "memory"."test17949306658136342532_test_dimension_backfill"."product_observations" ("region" text,"sku" text,"effective_at" date,"price" integer)
+  
+[0m23:51:06.416114 [debug] [Thread-635]: SQL status: OK in 0.001 seconds
+[0m23:51:06.416526 [debug] [Thread-636]: SQL status: OK in 0.001 seconds
+[0m23:51:06.418046 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.419792 [debug] [Thread-636]: Using duckdb connection "seed.test.product_observations"
+[0m23:51:06.421015 [debug] [Thread-635]: On seed.test.orders: 
+          COPY "memory"."test17949306658136342532_test_dimension_backfill"."orders" FROM '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/seeds/orders.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',', NULLSTR ['', 'null', 'NULL', 'Null'])
+        ...
+[0m23:51:06.421908 [debug] [Thread-636]: On seed.test.product_observations: 
+          COPY "memory"."test17949306658136342532_test_dimension_backfill"."product_observations" FROM '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/seeds/product_observations.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',', NULLSTR ['', 'null', 'NULL', 'Null'])
+        ...
+[0m23:51:06.426203 [debug] [Thread-636]: SQL status: OK in 0.002 seconds
+[0m23:51:06.426686 [debug] [Thread-635]: SQL status: OK in 0.004 seconds
+[0m23:51:06.428227 [debug] [Thread-636]: Writing runtime SQL for node "seed.test.product_observations"
+[0m23:51:06.429648 [debug] [Thread-635]: Writing runtime SQL for node "seed.test.orders"
+[0m23:51:06.432239 [debug] [Thread-636]: On seed.test.product_observations: COMMIT
+[0m23:51:06.433991 [debug] [Thread-635]: On seed.test.orders: COMMIT
+[0m23:51:06.435462 [debug] [Thread-636]: Using duckdb connection "seed.test.product_observations"
+[0m23:51:06.436447 [debug] [Thread-635]: Using duckdb connection "seed.test.orders"
+[0m23:51:06.437302 [debug] [Thread-636]: On seed.test.product_observations: COMMIT
+[0m23:51:06.438096 [debug] [Thread-635]: On seed.test.orders: COMMIT
+[0m23:51:06.439563 [debug] [Thread-636]: SQL status: OK in 0.001 seconds
+[0m23:51:06.440362 [debug] [Thread-635]: SQL status: OK in 0.000 seconds
+[0m23:51:06.441598 [debug] [Thread-636]: On seed.test.product_observations: Close
+[0m23:51:06.443585 [debug] [Thread-635]: On seed.test.orders: Close
+[0m23:51:06.445216 [info ] [Thread-636]: 2 of 2 OK loaded seed file test17949306658136342532_test_dimension_backfill.product_observations  [[32mINSERT 4[0m in 0.06s]
+[0m23:51:06.446678 [info ] [Thread-635]: 1 of 2 OK loaded seed file test17949306658136342532_test_dimension_backfill.orders  [[32mINSERT 4[0m in 0.06s]
+[0m23:51:06.447879 [debug] [Thread-636]: Finished running node seed.test.product_observations
+[0m23:51:06.450425 [debug] [Thread-635]: Finished running node seed.test.orders
+[0m23:51:06.454842 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.456835 [debug] [MainThread]: On master: BEGIN
+[0m23:51:06.458597 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:51:06.460368 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m23:51:06.461604 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.462954 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.464262 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.465825 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:06.466768 [debug] [MainThread]: On master: Close
+[0m23:51:06.467768 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:51:06.468631 [debug] [MainThread]: Connection 'seed.test.orders' was properly closed.
+[0m23:51:06.469658 [debug] [MainThread]: Connection 'seed.test.product_observations' was properly closed.
+[0m23:51:06.471121 [info ] [MainThread]: 
+[0m23:51:06.472073 [info ] [MainThread]: Finished running 2 seeds in 0 hours 0 minutes and 0.16 seconds (0.16s).
+[0m23:51:06.473372 [debug] [MainThread]: Command end result
+[0m23:51:06.504801 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/manifest.json
+[0m23:51:06.511766 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/semantic_manifest.json
+[0m23:51:06.517208 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/osi_document.json
+[0m23:51:06.519387 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/run_results.json
+[0m23:51:06.520816 [info ] [MainThread]: 
+[0m23:51:06.522504 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:51:06.524188 [info ] [MainThread]: 
+[0m23:51:06.525661 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m23:51:06.527455 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 0.6963754, "process_in_blocks": "28434", "process_kernel_time": 6.542381, "process_mem_max_rss": "447272", "process_out_blocks": "360616", "process_user_time": 44.85044}
+[0m23:51:06.529136 [debug] [MainThread]: Command `cli seed` succeeded at 23:51:06.528950 after 0.70 seconds
+[0m23:51:06.530612 [debug] [MainThread]: Flushing usage events
+
+
+============================== 23:51:06.539260 | b408fe26-f27e-451d-860e-eb3483936a31 ==============================
+[0m23:51:06.539260 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:51:06.540835 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'log_path': '/workspace/logs/test17949306658136342532', 'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'invocation_command': 'dbt tests/unit tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_table_function.py tests/functional/adapter/test_simple_snapshot.py tests/functional/adapter/test_dimension_backfill.py -q', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'log_cache_events': 'False', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/profile21', 'write_json': 'True', 'static_parser': 'True', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m23:51:06.548811 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m23:51:06.605960 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m23:51:06.875922 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:51:06.877072 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:51:06.877966 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:51:06.906817 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/manifest.json
+[0m23:51:06.911006 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/semantic_manifest.json
+[0m23:51:06.915407 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/osi_document.json
+[0m23:51:06.917192 [info ] [MainThread]: Found 1 model, 2 seeds, 528 macros
+[0m23:51:06.918657 [info ] [MainThread]: 
+[0m23:51:06.919614 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m23:51:06.920531 [info ] [MainThread]: 
+[0m23:51:06.921628 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:51:06.922979 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m23:51:06.925035 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m23:51:06.925932 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m23:51:06.926717 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:51:06.928520 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:51:06.929914 [debug] [ThreadPool]: On list_memory: Close
+[0m23:51:06.931543 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949306658136342532_test_dimension_backfill)
+[0m23:51:06.932388 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949306658136342532_test_dimension_backfill"
+"
+[0m23:51:06.933874 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.935209 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949306658136342532_test_dimension_backfill"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m23:51:06.935990 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:51:06.937528 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:51:06.939226 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.940182 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: BEGIN
+[0m23:51:06.941568 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:51:06.942574 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.943300 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949306658136342532_test_dimension_backfill"} */
+
+    
+    
+        create schema if not exists "memory"."test17949306658136342532_test_dimension_backfill"
+    
+[0m23:51:06.944432 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:51:06.945690 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: COMMIT
+[0m23:51:06.946391 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.947222 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: COMMIT
+[0m23:51:06.949230 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:51:06.950212 [debug] [ThreadPool]: On create_memory_test17949306658136342532_test_dimension_backfill: Close
+[0m23:51:06.952118 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949306658136342532_test_dimension_backfill, now list_memory_test17949306658136342532_test_dimension_backfill)
+[0m23:51:06.953802 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.954969 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: BEGIN
+[0m23:51:06.955818 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:51:06.957420 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:51:06.958436 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949306658136342532_test_dimension_backfill"
+[0m23:51:06.959301 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949306658136342532_test_dimension_backfill"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949306658136342532_test_dimension_backfill'
+    and lower(table_catalog) = 'memory'
+  
+[0m23:51:06.961617 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:51:06.963315 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: ROLLBACK
+[0m23:51:06.964433 [debug] [ThreadPool]: On list_memory_test17949306658136342532_test_dimension_backfill: Close
+[0m23:51:06.966090 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.966847 [debug] [MainThread]: On master: BEGIN
+[0m23:51:06.967484 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:51:06.968630 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:06.969496 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.970449 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:06.971354 [debug] [MainThread]: On master: COMMIT
+[0m23:51:06.972435 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:51:06.973069 [debug] [MainThread]: On master: Close
+[0m23:51:06.975422 [debug] [Thread-642]: Began running node model.test.product_dim
+[0m23:51:06.976423 [info ] [Thread-642]: 1 of 1 START sql dimension_backfill model test17949306658136342532_test_dimension_backfill.product_dim  [RUN]
+[0m23:51:06.977456 [debug] [Thread-642]: Re-using an available connection from the pool (formerly list_memory_test17949306658136342532_test_dimension_backfill, now model.test.product_dim)
+[0m23:51:06.978206 [debug] [Thread-642]: Began compiling node model.test.product_dim
+[0m23:51:06.981167 [debug] [Thread-642]: Writing injected SQL for node "model.test.product_dim"
+[0m23:51:06.982759 [debug] [Thread-642]: Began executing node model.test.product_dim
+[0m23:51:06.984793 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:06.985838 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+select database_name, type from duckdb_databases()
+[0m23:51:06.986766 [debug] [Thread-642]: Opening a new connection, currently in state closed
+[0m23:51:06.988756 [debug] [Thread-642]: SQL status: OK in 0.002 seconds
+[0m23:51:06.990633 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:06.991541 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m23:51:06.993193 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:06.996718 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:06.997928 [debug] [Thread-642]: On model.test.product_dim: BEGIN
+[0m23:51:06.999375 [debug] [Thread-642]: SQL status: OK in 0.000 seconds
+[0m23:51:07.000218 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.001020 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+create temporary table "product_dim__dbt_tmp20261117235106996333" as (
+      select distinct *
+  from (
+    
+
+select region, sku, effective_at, price from "memory"."test17949306658136342532_test_dimension_backfill"."product_observations"
+  ) as dbt_dimension_observation
+    )
+[0m23:51:07.003936 [debug] [Thread-642]: SQL status: OK in 0.002 seconds
+[0m23:51:07.006298 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.007259 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+      select
+          column_name,
+          column_type as data_type,
+          cast(null as bigint) as character_maximum_length,
+          cast(null as bigint) as numeric_precision,
+          cast(null as bigint) as numeric_scale
+      from (describe "product_dim__dbt_tmp20261117235106996333")
+  
+[0m23:51:07.009128 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.011246 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.012238 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+    select count(*) as dbt_null_count from "product_dim__dbt_tmp20261117235106996333" where "region" is null or "sku" is null or "effective_at" is null
+  
+[0m23:51:07.013809 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.015649 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.016555 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+    select
+    "region", "sku",
+    "effective_at" as dbt_effective_at,
+    count(distinct row("price")) as dbt_attribute_count
+  from "product_dim__dbt_tmp20261117235106996333"
+  group by "region", "sku", "effective_at"
+  having count(distinct row("price")) > 1
+  order by "effective_at"
+  
+[0m23:51:07.019656 [debug] [Thread-642]: SQL status: OK in 0.002 seconds
+[0m23:51:07.021798 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.022772 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+    select 1 as dbt_found from duckdb_tables()
+     where lower(database_name) = lower('memory')
+       and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+       and lower(table_name) = lower('product_dim__dbt_observations')
+     union all
+     select 1 from duckdb_views()
+     where lower(database_name) = lower('memory')
+       and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+       and lower(view_name) = lower('product_dim__dbt_observations')
+  
+[0m23:51:07.025513 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.027707 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.028714 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+create table "memory"."test17949306658136342532_test_dimension_backfill"."product_dim__dbt_observations" as (
+        select distinct "region", "sku", "effective_at", "price" from "product_dim__dbt_tmp20261117235106996333"
+      )
+[0m23:51:07.031484 [debug] [Thread-642]: SQL status: OK in 0.002 seconds
+[0m23:51:07.033612 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.034666 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+delete from "memory"."test17949306658136342532_test_dimension_backfill"."product_dim__dbt_observations" as stored
+  where exists (
+    select 1
+    from "product_dim__dbt_tmp20261117235106996333" as batch
+    where stored."region" is not distinct from batch."region" and stored."sku" is not distinct from batch."sku"
+      and stored."effective_at" is not distinct from batch."effective_at"
+  );
+  insert into "memory"."test17949306658136342532_test_dimension_backfill"."product_dim__dbt_observations" (
+    "region", "sku", "effective_at", "price"
+  )
+  select distinct
+    "region", "sku", "effective_at", "price"
+  from "product_dim__dbt_tmp20261117235106996333"
+[0m23:51:07.038382 [debug] [Thread-642]: SQL status: OK in 0.003 seconds
+[0m23:51:07.040517 [debug] [Thread-642]: Writing runtime sql for node "model.test.product_dim"
+[0m23:51:07.041800 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.042708 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+create table "memory"."test17949306658136342532_test_dimension_backfill"."product_dim" as (with observations as (
+    select "region", "sku", "effective_at", "price"
+    from "memory"."test17949306658136342532_test_dimension_backfill"."product_dim__dbt_observations"
+  ),
+  change_points as (
+    select
+      "region", "sku",
+      "price",
+      "effective_at" as "valid_from",
+      row("price") is distinct from
+        lag(row("price")) over (
+          partition by "region", "sku" order by "effective_at"
+        ) as dbt_is_change_point
+    from observations
+  ),
+  versions as (
+    select
+      "region", "sku",
+      "price",
+      "valid_from",
+      lead("valid_from") over (
+        partition by "region", "sku" order by "valid_from"
+      ) as "valid_to"
+    from change_points
+    where dbt_is_change_point
+  )
+  select
+    dbt_current."region", dbt_current."sku",
+    dbt_current."price",
+    dbt_current."valid_from",
+    dbt_current."valid_to",
+    md5(concat_ws(chr(31), coalesce(cast(dbt_current."region" as varchar), chr(30)), coalesce(cast(dbt_current."sku" as varchar), chr(30)), cast(dbt_current."valid_from" as varchar))) as "dimension_version_id"
+  from versions as dbt_current)
+[0m23:51:07.047225 [debug] [Thread-642]: SQL status: OK in 0.004 seconds
+[0m23:51:07.049536 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.050675 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+    select 1 as dbt_found from duckdb_tables()
+     where lower(database_name) = lower('memory')
+       and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+       and lower(table_name) = lower('orders')
+     union all
+     select 1 from duckdb_views()
+     where lower(database_name) = lower('memory')
+       and lower(schema_name) = lower('test17949306658136342532_test_dimension_backfill')
+       and lower(view_name) = lower('orders')
+  
+[0m23:51:07.052906 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.056556 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.058494 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+      select
+          column_name,
+          column_type as data_type,
+          cast(null as bigint) as character_maximum_length,
+          cast(null as bigint) as numeric_precision,
+          cast(null as bigint) as numeric_scale
+      from (describe "memory"."test17949306658136342532_test_dimension_backfill"."orders")
+  
+[0m23:51:07.060437 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.063502 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.064613 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+alter table "memory"."test17949306658136342532_test_dimension_backfill"."orders"
+    add column if not exists "dimension_version_id" varchar
+[0m23:51:07.067815 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.069756 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.070810 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+update "memory"."test17949306658136342532_test_dimension_backfill"."orders" as dbt_fact
+  set "dimension_version_id" = (
+    select dbt_version."dimension_version_id"
+    from "memory"."test17949306658136342532_test_dimension_backfill"."product_dim" as dbt_version
+    where dbt_version."region" is not distinct from dbt_fact."region" and dbt_version."sku" is not distinct from dbt_fact."product_code"
+      and dbt_fact."ordered_at" >= dbt_version."valid_from"
+      and (dbt_version."valid_to" is null
+           or dbt_fact."ordered_at" < dbt_version."valid_to")
+  )
+[0m23:51:07.074766 [debug] [Thread-642]: SQL status: OK in 0.003 seconds
+[0m23:51:07.077031 [debug] [Thread-642]: On model.test.product_dim: COMMIT
+[0m23:51:07.078173 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.079100 [debug] [Thread-642]: On model.test.product_dim: COMMIT
+[0m23:51:07.081433 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.083896 [debug] [Thread-642]: Using duckdb connection "model.test.product_dim"
+[0m23:51:07.085078 [debug] [Thread-642]: On model.test.product_dim: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.product_dim"} */
+
+      drop table if exists "memory"."test17949306658136342532_test_dimension_backfill"."product_dim__dbt_backup" cascade
+    
+[0m23:51:07.086518 [debug] [Thread-642]: SQL status: OK in 0.001 seconds
+[0m23:51:07.088435 [debug] [Thread-642]: On model.test.product_dim: Close
+[0m23:51:07.089857 [info ] [Thread-642]: 1 of 1 OK created sql dimension_backfill model test17949306658136342532_test_dimension_backfill.product_dim  [[32mOK[0m in 0.11s]
+[0m23:51:07.091326 [debug] [Thread-642]: Finished running node model.test.product_dim
+[0m23:51:07.093516 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:07.094971 [debug] [MainThread]: On master: BEGIN
+[0m23:51:07.095835 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:51:07.097319 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:07.098299 [debug] [MainThread]: On master: COMMIT
+[0m23:51:07.099079 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:51:07.100097 [debug] [MainThread]: On master: COMMIT
+[0m23:51:07.102024 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:51:07.103251 [debug] [MainThread]: On master: Close
+[0m23:51:07.104498 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:51:07.105357 [debug] [MainThread]: Connection 'model.test.product_dim' was properly closed.
+[0m23:51:07.106204 [info ] [MainThread]: 
+[0m23:51:07.107365 [info ] [MainThread]: Finished running 1 dimension backfill model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m23:51:07.108768 [debug] [MainThread]: Command end result
+[0m23:51:07.139585 [debug] [MainThread]: Wrote artifact WritableManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/manifest.json
+[0m23:51:07.147623 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/semantic_manifest.json
+[0m23:51:07.154712 [debug] [MainThread]: Wrote artifact OsiDocument to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/osi_document.json
+[0m23:51:07.156999 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/node/.solocoder-posix-tmp/pytest-of-node/pytest-13/project21/target/run_results.json
+[0m23:51:07.158923 [info ] [MainThread]: 
+[0m23:51:07.160812 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:51:07.162295 [info ] [MainThread]: 
+[0m23:51:07.163944 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m23:51:07.165808 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.6289444, "process_in_blocks": "28665", "process_kernel_time": 6.607301, "process_mem_max_rss": "447272", "process_out_blocks": "363312", "process_user_time": 45.119473}
+[0m23:51:07.167641 [debug] [MainThread]: Command `cli run` succeeded at 23:51:07.167449 after 0.63 seconds
+[0m23:51:07.169391 [debug] [MainThread]: Flushing usage events
+[0m23:51:07.171075 [debug] [MainThread]: test connection "__test" executing: select region, sku, price, valid_from, valid_to, dimension_version_id from "memory"."test17949306658136342532_test_dimension_backfill"."product_dim" order by region, sku, valid_from
+[0m23:51:07.172729 [debug] [MainThread]: Acquiring new duckdb connection '_test'
+[0m23:51:07.173814 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:51:07.176704 [debug] [MainThread]: On _test: Close
+[0m23:51:07.178816 [debug] [MainThread]: test connection "__test" executing: select order_id, dimension_version_id from "memory"."test17949306658136342532_test_dimension_backfill"."orders" order by order_id
+[0m23:51:07.183651 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:51:07.186167 [debug] [MainThread]: On _test: Close
+[0m23:51:07.188217 [debug] [MainThread]: Dropping schema "database: "memory"
+schema: "test17949306658136342532_test_dimension_backfill"
+".
+[0m23:51:07.193403 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:51:07.194655 [debug] [MainThread]: On _test: BEGIN
+[0m23:51:07.195563 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:51:07.196899 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:07.197801 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:51:07.198649 [debug] [MainThread]: On _test: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "_test"} */
+drop schema if exists "memory"."test17949306658136342532_test_dimension_backfill" cascade
+[0m23:51:07.200106 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:07.201373 [debug] [MainThread]: On _test: COMMIT
+[0m23:51:07.202193 [debug] [MainThread]: Using duckdb connection "_test"
+[0m23:51:07.203154 [debug] [MainThread]: On _test: COMMIT
+[0m23:51:07.204684 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:51:07.206371 [debug] [MainThread]: On _test: Close
